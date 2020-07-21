@@ -3,6 +3,7 @@
 namespace denis909\yii;
 
 use Exception;
+use yii\helpers\ArrayHelper;
 
 class CurlComponent extends \yii\base\Component
 {
@@ -25,7 +26,7 @@ class CurlComponent extends \yii\base\Component
 
         $ch = curl_init();
 
-        curl_setopt_array($ch, array_merge([
+        curl_setopt_array($ch, ArrayHelper::merge([
             CURLOPT_URL => $url,
             CURLOPT_HEADER => 0,
             CURLOPT_RETURNTRANSFER => true,
