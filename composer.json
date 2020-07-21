@@ -1,0 +1,9 @@
+{
+    "name": "denis909/yii2-curl-component",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "denis909\\yii\\": ""
+        }
+    }
+}
