@@ -46,6 +46,13 @@ class CurlComponent extends \yii\base\Component
             throw new Exception($error);
         }
 
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        if ($code !== 200)
+        {
+            throw new Exception('HTTP Code: ' . $code);
+        }
+
         curl_close($ch);
 
         return $this->result;
